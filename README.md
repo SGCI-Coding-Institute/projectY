@@ -1,2 +1,3 @@
 # projectY
-CHANGEME
+CHANGEME: auth test
+
