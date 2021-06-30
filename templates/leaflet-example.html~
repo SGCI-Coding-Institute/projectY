@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width"><title>https://leafletjs.com/examples/quick-start/example.html</title><link rel="stylesheet" type="text/css" href="resource://content-accessible/viewsource.css"></head><body id="viewsource" class="highlight" style="-moz-tab-size: 4"><pre id="line1"><span></span><span class="doctype">&lt;!DOCTYPE html&gt;</span><span>
+<span id="line2"></span></span><span>&lt;<span class="start-tag">html</span>&gt;</span><span>
+<span id="line3"></span></span><span>&lt;<span class="start-tag">head</span>&gt;</span><span>
+<span id="line4"></span>	
+<span id="line5"></span>	</span><span>&lt;<span class="start-tag">title</span>&gt;</span><span>Quick Start - Leaflet</span><span>&lt;/<span class="end-tag">title</span>&gt;</span><span>
+<span id="line6"></span>
+<span id="line7"></span>	</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">charset</span>="<a class="attribute-value">utf-8</a>" <span>/</span>&gt;</span><span>
+<span id="line8"></span>	</span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">name</span>="<a class="attribute-value">viewport</a>" <span class="attribute-name">content</span>="<a class="attribute-value">width=device-width, initial-scale=1.0</a>"&gt;</span><span>
+<span id="line9"></span>	
+<span id="line10"></span>	</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">shortcut icon</a>" <span class="attribute-name">type</span>="<a class="attribute-value">image/x-icon</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://leafletjs.com/examples/quick-start/docs/images/favicon.ico">docs/images/favicon.ico</a>" <span>/</span>&gt;</span><span>
+<span id="line11"></span>
+<span id="line12"></span>    </span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">href</span>="<a class="attribute-value" href="view-source:https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">https://unpkg.com/leaflet@1.7.1/dist/leaflet.css</a>" <span class="attribute-name">integrity</span>="<a class="attribute-value">sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==</a>" <span class="attribute-name">crossorigin</span>="<a class="attribute-value"></a>"<span>/</span>&gt;</span><span>
+<span id="line13"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a class="attribute-value" href="view-source:https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">https://unpkg.com/leaflet@1.7.1/dist/leaflet.js</a>" <span class="attribute-name">integrity</span>="<a class="attribute-value">sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==</a>" <span class="attribute-name">crossorigin</span>="<a class="attribute-value"></a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line14"></span>
+<span id="line15"></span>
+<span id="line16"></span>	
+<span id="line17"></span></span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+<span id="line18"></span></span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+<span id="line19"></span>
+<span id="line20"></span>
+<span id="line21"></span>
+<span id="line22"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">mapid</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width: 600px; height: 400px;</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line23"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line24"></span>
+<span id="line25"></span>	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+<span id="line26"></span>
+<span id="line27"></span>	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+<span id="line28"></span>		maxZoom: 18,
+<span id="line29"></span>		attribution: 'Map data &amp;copy; </span><span>&lt;a</span><span> href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap</span><span>&lt;/<span></span>a</span><span>&gt; contributors, ' +
+<span id="line30"></span>			'Imagery © </span><span>&lt;a</span><span> href="https://www.mapbox.com/"&gt;Mapbox</span><span>&lt;/<span></span>a</span><span>&gt;',
+<span id="line31"></span>		id: 'mapbox/streets-v11',
+<span id="line32"></span>		tileSize: 512,
+<span id="line33"></span>		zoomOffset: -1
+<span id="line34"></span>	}).addTo(mymap);
+<span id="line35"></span>
+<span id="line36"></span>	L.marker([51.5, -0.09]).addTo(mymap)
+<span id="line37"></span>		.bindPopup("</span><span>&lt;b</span><span>&gt;Hello world!</span><span>&lt;/<span></span>b</span><span>&gt;</span><span>&lt;b</span><span>r /&gt;I am a popup.").openPopup();
+<span id="line38"></span>
+<span id="line39"></span>	L.circle([51.508, -0.11], 500, {
+<span id="line40"></span>		color: 'red',
+<span id="line41"></span>		fillColor: '#f03',
+<span id="line42"></span>		fillOpacity: 0.5
+<span id="line43"></span>	}).addTo(mymap).bindPopup("I am a circle.");
+<span id="line44"></span>
+<span id="line45"></span>	L.polygon([
+<span id="line46"></span>		[51.509, -0.08],
+<span id="line47"></span>		[51.503, -0.06],
+<span id="line48"></span>		[51.51, -0.047]
+<span id="line49"></span>	]).addTo(mymap).bindPopup("I am a polygon.");
+<span id="line50"></span>
+<span id="line51"></span>
+<span id="line52"></span>	var popup = L.popup();
+<span id="line53"></span>
+<span id="line54"></span>	function onMapClick(e) {
+<span id="line55"></span>		popup
+<span id="line56"></span>			.setLatLng(e.latlng)
+<span id="line57"></span>			.setContent("You clicked the map at " + e.latlng.toString())
+<span id="line58"></span>			.openOn(mymap);
+<span id="line59"></span>	}
+<span id="line60"></span>
+<span id="line61"></span>	mymap.on('click', onMapClick);
+<span id="line62"></span>
+<span id="line63"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line64"></span>
+<span id="line65"></span>
+<span id="line66"></span>
+<span id="line67"></span></span><span>&lt;/<span class="end-tag">body</span>&gt;</span><span>
+<span id="line68"></span></span><span>&lt;/<span class="end-tag">html</span>&gt;</span><span>
+<span id="line69"></span></span></pre></body></html>
