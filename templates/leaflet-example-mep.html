@@ -26,7 +26,7 @@
   <body>
 
     <!--    <div id='map' style="width: 600px; height: 400px;"></div> -->
-    <iv id='map'></div>
+    <div id='map'></div>
     
     <script src="sample-geojson.js" type="text/javascript"></script>
     
@@ -43,13 +43,8 @@
       zoomOffset: -1
       }).addTo(map);
 
-      var baseballIcon = L.icon({
-      iconUrl: 'baseball-marker.png',
-      iconSize: [32, 37],
-		iconAnchor: [16, 37],
-      popupAnchor: [0, -28]
-      });      
 
+      
       function onEachFeature(feature, layer) {
 		var popupContent = "<p>I started out as a GeoJSON " +
 				feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
@@ -60,8 +55,7 @@
 
 		layer.bindPopup(popupContent);
       }
-      
-/*
+
       L.geoJSON([bicycleRental, campus], {
   
           style: function (feature) {
@@ -82,7 +76,6 @@
 		}
 	}).addTo(map);
 
-*/
     </script>
   </body>
 </html>
