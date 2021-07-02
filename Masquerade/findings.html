@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="findings.css">
+    <title></title>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<div class="topnav">
+  <a href="home.html">Home</a>
+  <a class="active" href="findings.html">Findings</a>
+  <a href="resources.html">Resources</a>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <h1>Findings</h1>
+</div>
+
+<hr class="rounded">
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+      <q>I don't want to breathe in my own germs, I might get sick.</q>
+      <p class="author">- Anti Masker</p>
+    </div>
+  
+    <div class="mySlides">
+      <q>They want to throw gods wonderful breathing system out the door</q>
+      <p class="author">- Anti Masker</p>
+    </div>
+  
+    <div class="mySlides">
+      <q>If I'm wearing a mask, no one will be able to see how attractive that I really am.</q>
+      <p class="author">- Anti Masker</p>
+    </div>
+  
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<h1>Mask Usage in Florida</h1>
+<h2>Since the beginning of Covid, Florida was known to be one of the outlier stattes that were against masks.
+  Citizens have felt like they have the option to wear masks even with a required mask mandate in place. 
+  Florida is also a popular state for travelling. Millions of people travel to Florida every year even regardless
+  of the Covid circumstance. This site of information will help visistors and current residents know what precautions need to be taken in 
+  the state of Florida.
+</h2>
+
+<!--Align graph pics-->
+<div class="row">
+    <div class="column">
+      <img src="never.png" alt="Never" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="sometimes.png" alt="Sometimes" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="always.png" alt="Always" style="width:100%">
+    </div>
+  </div>
+
+<!--Comments about graph-->
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <h2>Never</h2>
+      <p>Duval, Lee, and Polk County had the highest average of
+          citizens not wearing a mask. Percentages were about .05%.
+          For Duval County, that averages to about 468 people.
+          For Lee County, that avergaes to about 368 people.
+          For Polk County, that averages to about 343 people. 
+      </p>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+      <h2>Sometimes</h2>
+      <p>Duval and Polk County had the highest average of citizens that sometimes wear masks.
+          This means that they do wear masks but not all of the time. Percentages were about .08%.
+          For Duval County, that averages to about 748 people. 
+          For Polk County, that averages to about 548 people. 
+      </p>
+    </div>
+    <div class="column" style="background-color:#ccc;">
+      <h2>Always</h2>
+      <p>Miami-Dade, Broward, and Palm Beach County had the highest average of citizens that 
+          always wear masks. Percentages were about .7%.
+          For Miami-Dade County, that averages to about 18895 people.
+          For Broward County, that averages to about 13483 people.
+          For Palm Beach County, that averages to about 10255 people.
+      </p>
+    </div>
+  </div>
+  
+
+<hr class="rounded">
+
+<!-- Footer -->
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+
+
+</body>
+</html>
